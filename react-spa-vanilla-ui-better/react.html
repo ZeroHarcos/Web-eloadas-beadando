@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <title>React SPA – Vanilla</title>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+<body>
+  <h1>React SPA – Két alkalmazás</h1>
+  <button onclick="setApp('calculator')">Számológép</button>
+  <button onclick="setApp('clickgame')">Click Game</button>
+  <div id="root"></div>
+
+  <script>
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    let currentApp = 'calculator';
+
+    function setApp(appName) {
+      currentApp = appName;
+      renderApp();
+    }
+
+    function renderApp() {
+      if (currentApp === 'calculator') {
+        root.render(React.createElement(Calculator));
+      } else {
+        root.render(React.createElement(ClickGame));
+      }
+    }
+
+    renderApp();
+  </script>
+
+  <script src="calculator.js"></script>
+  <script src="rockpaperscissor.js"></script>
+</body>
+</html>
