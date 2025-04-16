@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX API</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <h1>Web-programozás-1 Előadás Házi feladat</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Kezdőlap</a></li>
+            <li><a href="table.html">Táblázat</a></li>
+            <li><a href="html5.html">HTML5</a></li>
+            <li><a href="chart.html">ChartJS</a></li>
+            <li><a href="ajax.html" class="active">AJAX</a></li>
+            <li><a href="oojs.html">OOJS</a></li>
+        </ul>
+    </nav>
+
+    <aside>
+        <p>Adatkezelés </p>
+    </aside>
+
+    <div class="content">
+        <h2>kommunikáció</h2>
+
+        <p><strong>Kódod (Neptun+azonosító):</strong> <span id="user-code">XYZ123abc999</span></p>
+
+        <section>
+            <h3>CREATE / UPDATE</h3>
+            <input type="text" id="idInput" placeholder="ID (Update-hez)">
+            <button onclick="getDataForId()">Adatok betöltése</button><br><br>
+
+            <input type="text" id="name" placeholder="Név">
+            <input type="text" id="height" placeholder="Magasság">
+            <input type="text" id="weight" placeholder="Súly">
+            <br><br>
+            <button onclick="createRecord()">Új adat </button>
+            <button onclick="updateRecord()"> módosítása</button>
+        </section>
+
+        <section>
+            <h3>DELETE</h3>
+            <input type="text" id="deleteId" placeholder="ID törléshez">
+            <button onclick="deleteRecord()">Törlés</button>
+        </section>
+
+        <section>
+            <h3>READ</h3>
+            <button onclick="readData()"> lekérése</button>
+            <div id="output"></div>
+            <p id="summary"></p>
+        </section>
+
+        <p id="message" style="color: green;"></p>
+    </div>
+
+    <footer>
+        <p>Készítők: Frits Adrián (UW5QTB), Schnürlein Alex (AY2V7F)</p>
+    </footer>
+
+    <script src="../js/ajax.js"></script>
+</body>
+</html>
