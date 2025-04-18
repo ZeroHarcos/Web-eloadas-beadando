@@ -41,6 +41,28 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error("Canvas nem található vagy nem támogatott.");
     }
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const svg = document.getElementById("interactiveSVG");
+    const output = document.getElementById("svgOutput");
+
+    svg.addEventListener("click", (e) => {
+        if (e.target.tagName === "circle") {
+            const currentColor = e.target.getAttribute("fill");
+            const newColor = getRandomColor();
+            e.target.setAttribute("fill", newColor);
+            output.textContent = `Kör színe változott: ${currentColor} ➡️ ${newColor}`;
+        }
+    });
+
+    function getRandomColor() {
+        const letters = "0123456789ABCDEF";
+        let color = "#";
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+});
 
 
 const draggable = document.getElementById("draggable");

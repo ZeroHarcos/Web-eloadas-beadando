@@ -1,4 +1,9 @@
 let i = 0;
-setInterval(() => {
-    postMessage("Szám: " + i++);
-}, 1000);
+
+function count() {
+    i++;
+    postMessage("Számlálás: " + i);
+    setTimeout(count, 1000);
+}
+
+count();
