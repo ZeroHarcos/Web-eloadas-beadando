@@ -30,6 +30,17 @@ const canvas = document.getElementById("myCanvas");
 const ctx = canvas.getContext("2d");
 ctx.fillStyle = "red";
 ctx.fillRect(20, 20, 100, 50);
+document.addEventListener("DOMContentLoaded", () => {
+  
+    const canvas = document.getElementById("myCanvas");
+    if (canvas && canvas.getContext) {
+        const ctx = canvas.getContext("2d");
+        ctx.fillStyle = "red";
+        ctx.fillRect(20, 20, 100, 50);
+    } else {
+        console.error("Canvas nem található vagy nem támogatott.");
+    }
+});
 
 
 const draggable = document.getElementById("draggable");
