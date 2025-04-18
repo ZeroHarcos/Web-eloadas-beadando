@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>ChartJS</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Web-programozás-1 Előadás Házi feladat</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Kezdőlap</a></li>
+            <li><a href="table.html">Táblázat</a></li>
+            <li><a href="html5.html">HTML5</a></li>
+            <li><a href="chart.html" class="active">ChartJS</a></li>
+            <li><a href="ajax.html">AJAX</a></li>
+            <li><a href="oojs.html">OOJS</a></li>
+        </ul>
+    </nav>
+
+    <aside>
+        <p>Táblázatból grafikon ChartJSsel</p>
+    </aside>
+
+    <div class="content">
+        <h2>5×5 számokat tartalmazó táblázat</h2>
+
+        <table id="number-table" border="1">
+            <thead>
+                <tr><th>#</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td>5</td><td>10</td><td>15</td><td>20</td><td>25</td></tr>
+                <tr><td>2</td><td>4</td><td>8</td><td>16</td><td>32</td><td>64</td></tr>
+                <tr><td>3</td><td>9</td><td>12</td><td>24</td><td>32</td><td>40</td></tr>
+                <tr><td>4</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+                <tr><td>5</td><td>10</td><td>20</td><td>30</td><td>40</td><td>50</td></tr>
+            </tbody>
+        </table>
+
+        <canvas id="chart" width="400" height="200"></canvas>
+    </div>
+
+    <footer>
+        <p>Készítők: Frits Adrián (UW5QTB), Schnürlein Alex (AY2V7F)</p>
+    </footer>
+
+    <script src="../js/chart.js"></script>
+</body>
+</html>
