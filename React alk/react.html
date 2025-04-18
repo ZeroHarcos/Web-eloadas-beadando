@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>React SPA - Calculator és Rock-Paper-Scissors</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <style>
+      body { font-family: sans-serif; text-align: center; padding: 20px; }
+      nav button {
+        margin: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>React Egyoldalas Alkalmazás</h1>
+    <nav>
+      <button onclick="setPage('calculator')">Számológép</button>
+      <button onclick="setPage('rps')">Kő – Papír – Olló</button>
+    </nav>
+    <div id="app"></div>
+    
+    <script src="calculator.js"></script>
+    <script src="rpsgame.js"></script>
+    <script>
+      let currentPage = 'calculator';
+
+      function renderApp() {
+        const root = document.getElementById('app');
+        if (currentPage === 'calculator') {
+          ReactDOM.render(React.createElement(Calculator), root);
+        } else if (currentPage === 'rps') {
+          ReactDOM.render(React.createElement(RockPaperScissors), root);
+        }
+      }
+
+      function setPage(page) {
+        currentPage = page;
+        renderApp();
+      }
+
+      renderApp();
+    </script>
+  </body>
+</html>
